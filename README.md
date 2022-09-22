@@ -3,6 +3,8 @@
 
 A header-only library for creating and printing progress bars to the console. Unlike the many existing progress bar libraries, this one can print multiple progress bars and has multiple styles.
 
+![Progress bar showcase gif](./example.gif "Progress bar showcase gif")
+
 Currently works for:
 * MacOS
 * Linux
