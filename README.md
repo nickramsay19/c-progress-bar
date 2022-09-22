@@ -38,3 +38,10 @@ ProgressBarPrinter printer = NewProgressBarPrinter(bars, bars_count, printer_fla
 ```c
 ProgressBarPrinterPrint(printer);
 ```
+
+### 6. Free progress bar memory
+```c
+FreeProgressBar(&bars[0]);
+FreeProgressBar(&bars[1]);
+free(bars);
+```
