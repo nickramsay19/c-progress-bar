@@ -58,3 +58,6 @@ free(bars);
 * PBP_PROGRESS_MINUS
 * PBP_PROGRESS_PLUS
 * PBP_PROGRESS_HASH
+
+## Caveats
+* Currently the ProgressBarPrinter's progress bar array pointer is not memory safe. It is expected that the user doesn't free this memory until after all printing is done. The alternative to this would be wrapping the progress bar array creation and deletion code in the printer code, which seems unnecessary.
