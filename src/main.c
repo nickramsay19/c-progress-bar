@@ -12,12 +12,12 @@ int main(int argc, char** argv) {
 	const uint16_t bars_count = 2;
 	ProgressBar* bars = malloc(bars_count * sizeof(ProgressBar));
 	// add some bars
-	bars[0] = NewProgressBar("0", 100);
+	bars[0] = NewProgressBar("zero", 100);
 	bars[1] = NewProgressBar("1", 100);
 	//bars[2] = NewProgressBar("2", 100);
 
 	// printer
-	ProgressBarPrinter printer = NewProgressBarPrinter(bars, bars_count, PBP_TITLES | PBP_NO_BRACKETS);
+	ProgressBarPrinter printer = NewProgressBarPrinter(bars, bars_count, PBP_TITLES | PBP_CURLY_BRACKETS);
 
 	for (uint8_t i = 0; i < 100; i++) {
 		UpdateProgressBar(&bars[0], 1);
@@ -29,7 +29,7 @@ int main(int argc, char** argv) {
 
 	// free progress bars
 	for (uint8_t i = 0; i < bars_count; i++) {
-		FreeProgressBar(&bars[0]);
+		FreeProgressBar(&bars[i]);
 	}
 	free(bars);
 
