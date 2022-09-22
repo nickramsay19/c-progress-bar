@@ -27,5 +27,11 @@ int main(int argc, char** argv) {
 		usleep(100000); 
 	}
 
+	// free progress bars
+	for (uint8_t i = 0; i < bars_count; i++) {
+		FreeProgressBar(&bars[0]);
+	}
+	free(bars);
+
 	return EXIT_SUCCESS;
 }
