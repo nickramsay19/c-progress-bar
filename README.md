@@ -45,3 +45,16 @@ FreeProgressBar(&bars[0]);
 FreeProgressBar(&bars[1]);
 free(bars);
 ```
+
+## Progress bar printer options
+* PBP_SQUARE_BRACKETS (default)
+* PBP_CURLY_BRACKETS 
+* PBP_NO_BRACKETS
+* PBP_NO_TITLES  (default)
+* PBP_TITLES
+* PBP_PROGRESS_STAR (default)
+* PBP_PROGRESS_PERCENT
+* PBP_PROGRESS_DASH
+* PBP_PROGRESS_MINUS
+* PBP_PROGRESS_PLUS
+* PBP_PROGRESS_HASH
